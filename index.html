@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080f20">
+<title>The Best Gehad ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap');
+
+:root {
+  --navy: #080f20;
+  --navy2: #101b35;
+  --blue: #2563eb;
+  --sky: #93c5fd;
+  --white: #f8fafc;
+  --muted: #a5b4cf;
+  --line: rgba(147,197,253,.18);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% -10%, #17366d 0%, transparent 55%),
+    var(--navy);
+  color: var(--white);
+  font-family: 'Cairo', sans-serif;
+  overflow-x: hidden;
+}
+
+button { font-family: inherit; cursor: pointer; }
+
+button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 4px;
+}
+
+#app {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 22px 18px 45px;
+  position: relative;
+}
+
+.screen { display: none; animation: appear .65s ease both; }
+.screen.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0) rotate(-8deg); }
+  50% { transform: translateY(-14px) rotate(8deg); }
+}
+
+@keyframes pulse {
+  0%,100% { opacity: .45; transform: scale(.96); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes twinkle {
+  0%,100% { opacity: .2; }
+  50% { opacity: 1; }
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.logo { color: #bfdbfe; font-weight: 800; }
+
+.stage {
+  font-size: 11px;
+  background: rgba(37,99,235,.15);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: 99px;
+}
+
+.center { text-align: center; }
+
+.eyebrow {
+  color: #93c5fd;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+h1, h2, h3 { margin: 0; line-height: 1.6; }
+
+h1 {
+  font-size: clamp(30px, 8vw, 50px);
+  font-weight: 800;
+  color: #eff6ff;
+}
+
+h2 { font-size: 25px; color: #e0f2fe; }
+
+h3 { font-size: 18px; color: #dbeafe; }
+
+p {
+  color: var(--muted);
+  line-height: 2.1;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.hero {
+  min-height: 76vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero .butterfly {
+  font-size: 66px;
+  animation: float 5s ease-in-out infinite;
+  display: inline-block;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 22px rgba(96,165,250,.3));
+}
+
+.hero .line {
+  width: 80px;
+  height: 1px;
+  background: #3b82f6;
+  margin: 25px auto;
+}
+
+.hero .sub {
+  max-width: 330px;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  border: 1px solid rgba(147,197,253,.3);
+  background: linear-gradient(135deg,#2563eb,#1d4ed8);
+  color: white;
+  border-radius: 14px;
+  padding: 14px 25px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform .2s, filter .2s;
+  box-shadow: 0 8px 30px rgba(37,99,235,.18);
+}
+
+.btn:hover { filter: brightness(1.15); }
+.btn:active { transform: scale(.97); }
+
+.btn.secondary {
+  background: rgba(15,27,53,.8);
+  border-color: var(--line);
+  box-shadow: none;
+}
+
+.btn.wide { width: 100%; margin-top: 20px; }
+
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.small-note {
+  text-align: center;
+  color: #64748b;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg,rgba(19,34,64,.92),rgba(9,18,37,.95));
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 22px;
+  margin: 15px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(37,99,235,.06);
+  top: -40px;
+  left: -30px;
+}
+
+.card .icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.card p { margin-bottom: 0; }
+
+.section-head { margin: 18px 0 25px; }
+
+.section-head p { max-width: 450px; }
+
+.memory-photo {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 14px;
+  display: none;
+}
+
+.memory-photo.visible { display: block; }
+
+.memory-tag {
+  display: inline-block;
+  color: #93c5fd;
+  font-size: 11px;
+  background: rgba(37,99,235,.13);
+  padding: 4px 10px;
+  border-radius: 99px;
+  margin-bottom: 10px;
+}
+
+.memory-number {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-size: 12px;
+  color: #475569;
+  font-weight: 800;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin: 30px 0;
+}
+
+.quote {
+  border-right: 3px solid #3b82f6;
+  padding: 3px 16px 3px 0;
+  margin: 20px 0;
+  color: #dbeafe;
+  font-size: 15px;
+  line-height: 2.1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.mini-card {
+  background: rgba(16,27,53,.7);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px 13px;
+  text-align: center;
+}
+
+.mini-card .big { font-size: 28px; display: block; margin-bottom: 8px; }
+
+.mini-card p { font-size: 12px; line-height: 1.8; }
+
+.progress {
+  height: 5px;
+  background: #1e293b;
+  border-radius: 99px;
+  overflow: hidden;
+  margin: 18px 0 25px;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg,#2563eb,#93c5fd);
+  transition: width .4s;
+}
+
+.option {
+  display: block;
+  width: 100%;
+  background: rgba(15,27,53,.8);
+  border: 1px solid var(--line);
+  color: #dbeafe;
+  border-radius: 14px;
+  padding: 15px;
+  margin: 10px 0;
+  text-align: right;
+  font-size: 13px;
+  line-height: 1.7;
+  transition: background .2s, border-color .2s;
+}
+
+.option:hover {
+  background: rgba(37,99,235,.18);
+  border-color: #3b82f6;
+}
+
+#quizFeedback {
+  min-height: 30px;
+  text-align: center;
+  color: #93c5fd;
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+.open-card {
+  cursor: pointer;
+  text-align: right;
+  width: 100%;
+  color: white;
+}
+
+.open-card:focus-visible { outline-offset: -4px; }
+
+.open-card .open-label {
+  color: #64748b;
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+.letter {
+  display: none;
+  margin-top: 12px;
+  background: rgba(8,15,32,.7);
+  border: 1px solid rgba(147,197,253,.2);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.letter.open { display: block; animation: appear .4s ease both; }
+
+.letter p { color: #cbd5e1; }
+
+.final-box {
+  background: linear-gradient(160deg,#132d5b,#0c172d 75%);
+  border: 1px solid rgba(147,197,253,.25);
+  border-radius: 24px;
+  padding: 27px 22px;
+  margin-top: 20px;
+}
+
+.final-box p { color: #cbd5e1; }
+
+.dream {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(147,197,253,.1);
+}
+
+.dream:last-child { border: 0; }
+
+.dream .emoji { font-size: 25px; }
+
+.dream p { margin: 0; font-size: 13px; }
+
+.signature {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+}
+
+.signature .name {
+  font-family: 'Playfair Display',serif;
+  font-size: 28px;
+  color: #bfdbfe;
+  direction: ltr;
+}
+
+.back {
+  display: block;
+  margin: 28px auto 0;
+  background: none;
+  border: 0;
+  color: #64748b;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  color: #93c5fd;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@media (max-width:380px) {
+  #app { padding: 18px 14px 35px; }
+  .card { padding: 18px; }
+  h2 { font-size: 22px; }
+}
+</style>
+</head>
+
+<body>
+<div id="app">
+
+  <!-- نجوم خلفية -->
+  <div class="stars" aria-hidden="true">
+    <span class="star" style="top:8%;left:8%;animation-delay:.2s">✦</span>
+    <span class="star" style="top:20%;left:85%;animation-delay:1s">·</span>
+    <span class="star" style="top:48%;left:4%;animation-delay:1.7s">✧</span>
+    <span class="star" style="top:70%;left:92%;animation-delay:.6s">·</span>
+    <span class="star" style="top:90%;left:14%;animation-delay:2s">✦</span>
+  </div>
+
+  <div class="topbar">
+    <span class="logo">THE BEST GEHAD</span>
+    <span class="stage" id="stage">01 / 05</span>
+  </div>
+
+  <!-- المرحلة 1 -->
+  <section class="screen active" id="screen1">
+    <div class="hero">
+      <span class="butterfly">🦋</span>
+      <div class="eyebrow">A LITTLE WORLD FOR YOU</div>
+      <h1>The Best<br>Gehad</h1>
+      <div class="line"></div>
+      <p class="sub">
+        في حاجة صغيرة معمولة مخصوص ليكي...
+        خدي وقتك، وابدئي الرحلة ❤️
+      </p>
+      <button class="btn wide" onclick="go(2)">ابدئي الرحلة ✨</button>
+      <div class="small-note">من إبراهيم، بكل الحب والامتنان.</div>
+    </div>
+  </section>
+
+  <!-- المرحلة 2 -->
+  <section class="screen" id="screen2">
+    <div class="section-head">
+      <div class="eyebrow">02 — OUR LITTLE MEMORIES</div>
+      <h2>حاجات صغيرة...<br>بس غالية عندي ❤️</h2>
+      <p>في حاجات بتعدي عادي، وفي حاجات بتفضل جواك مهما الوقت عدى.</p>
+    </div>
+
+    <div class="card">
+      <span class="memory-number">01</span>
+      <span class="icon">😂</span>
+      <span class="memory-tag">THE FUNNIEST MEMORY</span>
+      <h3>يوم ما خدتي الأرض بالحضن</h3>
+      <p>
+        فاكرة لما جرينا مع بعض وإنتِ وقعتي وخدتي الأرض بالحضن؟
+        وأنا كمان جالي تسلخات ومبقتش عارف أمشي 😂
+      </p>
+      <div class="quote">
+        كنت ماشي معاكي زي البطريق...<br>
+        بس بصراحة كانت من أحلى البطاريق اللي مشيت معاها في حياتي.
+      </div>
+      <p>
+        كل ما أفتكر اليوم ده بضحك، مش عشان وقعتي بس،
+        عشان إحنا الاتنين كنا في حالة كوميدية لا تتكرر 😂❤️
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="memory-number">02</span>
+      <span class="icon">🎬</span>
+      <span class="memory-tag">ONE OF MY FAVORITE DAYS</span>
+      <h3>أربع ساعات... ولسه عايز أكتر</h3>
+      <p>
+        فاكرة يوم ما سهرنا واتفرجنا على فيلم،
+        وشغلنا الأغاني الرومانسية اللي بنحبها،
+        وقعدنا نضحك ونتكلم؟
+      </p>
+      <p>
+        اليوم ده كان من أحلى أيام حياتي، مش عشان الفيلم
+        ولا الأغاني... عشان كنت معاكي.
+      </p>
+      <div class="quote">
+        أكتر من 4 ساعات كلام وضحك،<br>
+        ولسه الوقت كان بيجري وأنا مش حاسس بيه.
+      </div>
+      <p>
+        اليوم ده من الحاجات اللي لما أفتكرها أبتسم لوحدي ❤️
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="memory-number">03</span>
+      <span class="icon">💙</span>
+      <span class="memory-tag">A LITTLE REMINDER</span>
+      <h3>إنتِ ليكي مكان خاص</h3>
+      <p>
+        مش لازم كل يوم يكون فيه كلام كتير.
+        ساعات موقف صغير، ضحكة، أو مكالمة طويلة
+        بتفضل فاكرها أكتر من أي كلام.
+      </p>
+      <p>
+        ودي واحدة من الحاجات اللي بحبها في وجودك في حياتي.
+      </p>
+    </div>
+
+    <button class="btn wide" onclick="go(3)">كملي يا The Best Gehad 💙</button>
+    <button class="back" onclick="go(1)">رجوع</button>
+  </section>
+
+  <!-- المرحلة 3 -->
+  <section class="screen" id="screen3">
+    <div class="section-head">
+      <div class="eyebrow">03 — THE GEHAD QUIZ</div>
+      <h2>اختبار جهاد الرسمي 😂</h2>
+      <p>نشوف كده إبراهيم فاهم جهاد ولا محتاج يذاكر أكتر.</p>
+    </div>
+
+    <div class="card">
+      <div id="quizBox">
+        <span class="memory-tag" id="questionCount">السؤال 1 من 5</span>
+        <h3 id="question">إيه أكتر لون بتحبيه؟</h3>
+        <div class="progress"><span id="quizProgress" style="width:20%"></span></div>
+        <div id="options"></div>
+        <div id="quizFeedback" aria-live="polite"></div>
+      </div>
+
+      <div id="quizResult" style="display:none;text-align:center">
+        <span class="icon">🏆</span>
+        <h2>خلصتي الاختبار!</h2>
+        <p id="resultText"></p>
+        <div class="quote">النتيجة الرسمية: جهاد تستاهل تتبسط ❤️</div>
+        <button class="btn wide" onclick="go(4)">افتحي رسائل جهاد 💌</button>
+      </div>
+    </div>
+
+    <button class="back" onclick="go(2)">رجوع</button>
+  </section>
+
+  <!-- المرحلة 4 -->
+  <section class="screen" id="screen4">
+    <div class="section-head">
+      <div class="eyebrow">04 — OPEN WHEN...</div>
+      <h2>رسائل صغيرة ليكي 💌</h2>
+      <p>اختاري أي كارت واضغطي عليه. كل واحد فيه رسالة مختلفة.</p>
+    </div>
+
+    <button class="card open-card" onclick="openLetter('sad')">
+      <span class="icon">🌙</span>
+      <h3>افتحي لما تكوني زعلانة</h3>
+      <p>لما اليوم يكون تقيل شوية...</p>
+      <div class="open-label">اضغطي عشان تفتحي الرسالة ↓</div>
+      <div class="letter" id="letter-sad">
+        <p>
+          يا جهاد، خدي نفس كده ❤️
+          مش لازم كل حاجة تتحل النهارده،
+          ومش لازم تبقي قوية طول الوقت.
+        </p>
+        <p>
+          اهتمي بنفسك، وادي لنفسك وقت ترتاح.
+          إنتِ تستاهلي الهدوء والحاجات الحلوة.
+          وبكرة فرصة جديدة بإذن الله.
+        </p>
+      </div>
+    </button>
+
+    <button class="card open-card" onclick="openLetter('happy')">
+      <span class="icon">☀️</span>
+      <h3>افتحي لما تكوني مبسوطة</h3>
+      <p>لما يكون يومك حلو وعايزة تكمليه...</p>
+      <div class="open-label">اضغطي عشان تفتحي الرسالة ↓</div>
+      <div class="letter" id="letter-happy">
+        <p>
+          أهو ده الكلام 😂❤️
+          خلي اليوم ده يعدي عليكي حلو،
+          واعملي حاجة بتحبيها.
+        </p>
+        <p>
+          اضحكي، اتبسطي، وخدي بالك من نفسك.
+          إنتِ تستاهلي أيام حلوة كتير.
+        </p>
+      </div>
+    </button>
+
+    <button class="card open-card" onclick="openLetter('tired')">
+      <span class="icon">🧸</span>
+      <h3>افتحي لما تكوني تعبانة</h3>
+      <p>لما تحسي إنك محتاجة راحة...</p>
+      <div class="open-label">اضغطي عشان تفتحي الرسالة ↓</div>
+      <div class="letter" id="letter-tired">
+        <p>
+          مش لازم تخلصي الدنيا كلها النهارده.
+          إنتِ بتعملي اللي عليكي، وده كفاية.
+        </p>
+        <p>
+          ارتاحي شوية يا جهاد،
+          وبعدين كملي خطوة خطوة.
+          أنا واثق فيكي وفي اللي تقدري توصليله ❤️
+        </p>
+      </div>
+    </button>
+
+    <button class="card open-card" onclick="openLetter('sleep')">
+      <span class="icon">🌌</span>
+      <h3>افتحي قبل ما تنامي</h3>
+      <p>آخر رسالة قبل نهاية اليوم...</p>
+      <div class="open-label">اضغطي عشان تفتحي الرسالة ↓</div>
+      <div class="letter" id="letter-sleep">
+        <p>
+          تصبحي على خير يا جهاد ❤️
+        </p>
+        <p>
+          أتمنى بكرة يكون أهدى وأحلى من النهارده.
+          نامي وإنتِ عارفة إنك عملتي اللي عليكي،
+          وإنك تستاهلي كل خير.
+        </p>
+      </div>
+    </button>
+
+    <button class="btn wide" onclick="go(5)">آخر حاجة... مخصوص ليكي 🎁</button>
+    <button class="back" onclick="go(3)">رجوع</button>
+  </section>
+
+  <!-- المرحلة 5 -->
+  <section class="screen" id="screen5">
+    <div class="section-head center">
+      <div class="eyebrow">05 — YOUR DREAMS</div>
+      <h2>جهاد... اللي نفسها تحققه</h2>
+      <p>
+        أنا عارف إن عندك أحلام كتير،
+        ونفسي أشوفك بتحققيها واحدة واحدة.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="icon">🦋</span>
+      <h3>ألوانك وحاجاتك المفضلة</h3>
+      <div class="grid">
+        <div class="mini-card">
+          <span class="big">💙</span>
+          <p>الأزرق</p>
+        </div>
+        <div class="mini-card">
+          <span class="big">🖤</span>
+          <p>الأسود</p>
+        </div>
+        <div class="mini-card">
+          <span class="big">🦋</span>
+          <p>الفراشة</p>
+        </div>
+        <div class="mini-card">
+          <span class="big">🐼</span>
+          <p>الدب الباندا</p>
+        </div>
+      </div>
+      <div class="quote">
+        وأيس كريم زبادي مانجا... عشان مننساش أهم التفاصيل 😂🥭
+      </div>
+    </div>
+
+    <div class="final-box">
+      <div class="eyebrow">YOUR FUTURE</div>
+      <h3>أنا شايفك فين؟</h3>
+
+      <div class="dream">
+        <span class="emoji">🏆</span>
+        <p>
+          <strong>شخص ناجح في مجالك</strong><br>
+          تفتحي مكان لنفسك، وتبقي ترينر كبيرة وناجحة جدًا.
+          وأنا واثق إنك هتقدري تحققي ده.
+        </p>
+      </div>
+
+      <div class="dream">
+        <span class="emoji">📖</span>
+        <p>
+          <strong>ختم القرآن حفظًا</strong><br>
+          ربنا ييسرلك طريقك، ويعينك على كل خطوة في الحلم ده.
+        </p>
+      </div>
+
+      <div class="dream">
+        <span class="emoji">✈️</span>
+        <p>
+          <strong>سفر وحج وعمرة</strong><br>
+          ربنا يرزقك زيارة الأماكن اللي نفسك فيها،
+          ويحققلك كل أمنية حلوة.
+        </p>
+      </div>
+
+      <div class="dream">
+        <span class="emoji">🏡</span>
+        <p>
+          <strong>حياة سعيدة ومستقرة</strong><br>
+          وربنا يكتب الخير في طريقنا،
+          ويجمعنا على خير لو ده خير لينا.
+        </p>
+      </div>
+    </div>
+
+    <div class="final-box">
+      <div class="eyebrow">A LETTER FROM IBRAHIM</div>
+      <h2>يا The Best Gehad ❤️</h2>
+
+      <p>
+        لو وصلتي لحد هنا، فأنا عايزك تعرفي إن الموقع ده
+        كله معمول عشان حاجة واحدة:
+      </p>
+
+      <div class="quote">
+        إني أشوفك مبسوطة.
+      </div>
+
+      <p>
+        مش لازم كل يوم يكون مثالي،
+        ومش لازم كل حاجة في حياتك تمشي زي ما إنتِ عايزة.
+        بس أتمنى تفضلي فاكرة إنك إنسانة تستاهل الحاجات الحلوة،
+        وتستاهل حد يفرح لفرحها ويشجعها لما تتعب.
+      </p>
+
+      <p>
+        أنا مبسوط بالحاجات اللي بتعمليها،
+        وبالمجهود اللي بتبذليه،
+        وبكل خطوة بتاخديها ناحية اللي نفسك فيه.
+      </p>
+
+      <p>
+        وربنا يحققلك اللي نفسك فيه،
+        ويكتبلك أيام حلوة كتير،
+        ويحققلك أحلامك واحدة واحدة.
+      </p>
+
+      <p>
+        دي كانت مفاجأتي الصغيرة ليكي.
+        خليكي مبسوطة يا جهاد،
+        عشان ضحكتك حلوة ❤️
+      </p>
+
+      <div class="signature">
+        <div class="name">Ebrahim</div>
+        <p>من إبراهيم، لجهاد ❤️</p>
+      </div>
+    </div>
+
+    <button class="btn wide" onclick="go(1)">نرجع نبدأ من الأول 🦋</button>
+    <p class="small-note">The Best Gehad — Made with love.</p>
+  </section>
+
+</div>
+
+<script>
+"use strict";
+
+const screens = document.querySelectorAll(".screen");
+const stage = document.getElementById("stage");
+
+function go(number) {
+  screens.forEach(screen => screen.classList.remove("active"));
+  const target = document.getElementById("screen" + number);
+  if (target) target.classList.add("active");
+
+  stage.textContent = String(number).padStart(2, "0") + " / 05";
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+/* اختبار جهاد */
+const questions = [
+  {
+    q: "إيه أكتر لون بتحبيه؟",
+    options: ["الأزرق 💙", "الأسود 🖤", "الاتنين طبعًا 😂"],
+    answer: 2,
+    feedback: "الاتنين طبعًا يا جهاد، إحنا عارفينك 😂❤️"
+  },
+  {
+    q: "مين أكتر حد بتحبيه في الدنيا؟",
+    options: ["الدب الباندا 🐼", "إبراهيم ❤️", "الفراشة 🦋"],
+    answer: 1,
+    feedback: "الإجابة الصح يا جماعة 😂❤️"
+  },
+  {
+    q: "إيه أيس كريم جهاد المفضل؟",
+    options: ["فانيليا", "شوكولاتة", "زبادي مانجا 🥭"],
+    answer: 2,
+    feedback: "زبادي مانجا... التفاصيل المهمة 😂"
+  },
+  {
+    q: "إيه الحلم اللي نفسك تحققيه في مجالك؟",
+    options: ["تفتحي مكان لنفسك وتبقي ترينر ناجحة", "تبطلي كل حاجة", "تنامي طول اليوم 😂"],
+    answer: 0,
+    feedback: "وأنا واثق إنك هتحققيه بإذن الله ❤️"
+  },
+  {
+    q: "إيه أهم حاجة في اليوم الصعب؟",
+    options: ["أهتم بنفسي وأرتاح شوية", "أضغط على نفسي أكتر", "أختفي من العالم 😂"],
+    answer: 0,
+    feedback: "بالظبط، الراحة مش كسل ❤️"
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let quizLocked = false;
+
+function renderQuestion() {
+  const q = questions[currentQuestion];
+
+  document.getElementById("questionCount").textContent =
+    "السؤال " + (currentQuestion + 1) + " من " + questions.length;
+
+  document.getElementById("question").textContent = q.q;
+
+  document.getElementById("quizProgress").style.width =
+    ((currentQuestion + 1) / questions.length * 100) + "%";
+
+  document.getElementById("quizFeedback").textContent = "";
+  const options = document.getElementById("options");
+  options.innerHTML = "";
+
+  q.options.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.className = "option";
+    button.type = "button";
+    button.textContent = option;
+    button.addEventListener("click", () => answerQuestion(index));
+    options.appendChild(button);
+  });
+}
+
+function answerQuestion(index) {
+  if (quizLocked) return;
+  quizLocked = true;
+
+  const q = questions[currentQuestion];
+  if (index === q.answer) score++;
+
+  document.getElementById("quizFeedback").textContent = q.feedback;
+
+  setTimeout(() => {
+    currentQuestion++;
+    quizLocked = false;
+
+    if (currentQuestion >= questions.length) {
+      document.getElementById("quizBox").style.display = "none";
+      document.getElementById("quizResult").style.display = "block";
+      document.getElementById("resultText").textContent =
+        "جبتي " + score + " من " + questions.length +
+        " — بس النتيجة الحقيقية إنك The Best Gehad دايمًا ❤️";
+    } else {
+      renderQuestion();
+    }
+  }, 1100);
+}
+
+function openLetter(name) {
+  const letter = document.getElementById("letter-" + name);
+  if (letter) letter.classList.toggle("open");
+}
+
+renderQuestion();
+</script>
+
+</body>
+</html>
